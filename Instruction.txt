@@ -1,0 +1,9 @@
+1.Vào trong ubuntu distro, home/huy/workspace, tạo folder project mới
+2.git clone ssh laravel-docker-template project_name về, cd inside
+3.docker-compose up -d để build container
+4.docker exec -it app bash
+5. apt install nano (can skip because already install), nano ../../../etc/passwd, change www-data uid to 1000
+6. exit, docker exec -u www-data -it app bash
+7. composer create-project laravel/laravel .
+8. chmod 777 -R src/storage, chmod 777 -R src/bootstrap
+ Set full quyền những folder mà webserver www-data ghi file

@@ -30,7 +30,7 @@ RUN docker-php-ext-install zip
 #RUN apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 # INSTALL SUPERVISORD
-RUN apt-get update && apt-get install -y nginx supervisor cron
+RUN apt-get update && apt-get install -y nginx supervisor cron nano
 
 # Install the PHP zip extention
 RUN docker-php-ext-install zip

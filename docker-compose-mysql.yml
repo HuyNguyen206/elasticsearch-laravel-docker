@@ -2,26 +2,26 @@ version: '3'
 services:
   mysql:
     platform: linux/x86_64
-    container_name: mysql-travel
+    container_name: mysql-app
     restart:  unless-stopped
     tty: true
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: travel_api
+      MYSQL_DATABASE: app_api
       MYSQL_USER: admin
       MYSQL_PASSWORD: 123456
     image: mysql:8.0.32
     ports:
       - '33063:3306'
     volumes:
-      - './sm_data:/var/lib/mysql'
+      - './app_data:/var/lib/mysql'
     command: mysqld --default-authentication-plugin=mysql_native_password
     networks:
-      - net_travel
+      - net_app
 
 networks:
-  net_travel:
+  net_app:
     driver: bridge
 
 volumes:
-  travel_data:
+  app_data:

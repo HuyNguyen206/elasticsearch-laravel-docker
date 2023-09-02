@@ -48,6 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
-/sm_data/
+/app_data/
 /test.php
 .env
